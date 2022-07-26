@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="waveDiv">
+      <div class="pusher"></div>
+      <img src="SVG/wave.svg" alt="" class="wave" />
+    </div>
+    <div class="infoDiv">
+      <p>How it works?</p>
+      <i class="fa-solid fa-circle-info"></i>
+    </div>
+    <div class="parent">
+      <div class="div1">
+        <i class="fa-solid fa-clipboard-list"></i>
+        <div class="todoList">
+          <form
+            action="
+          "
+            id="form"
+          >
+            <input
+              type="text"
+              placeholder="Type a to-do"
+              autocomplete="off"
+              id="input"
+            />
+            <button type="submit" class="addTodo">Add</button>
+          </form>
+          <div id="toDos"></div>
+        </div>
+      </div>
+      <div class="div2">
+        <div class="overview">
+          <!-- Pie chart -->
+          <div class="leftPartOverview">
+            <div class="inputCalories">
+              <div class="circle">
+                <div class="circleText">
+                  <form action="" id="caloriesForm">
+                    <input
+                      type="number"
+                      placeholder="?"
+                      min="1"
+                      max="99999"
+                      id="caloriesInput"
+                    />
+                  </form>
+                </div>
+              </div>
+              <!-- <p>Remaining calories</p> -->
+            </div>
+            <div>
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+          <!-- end of piechart -->
+          <div class="statistics">
+            <ul>
+              <li>
+                <div class="dot1"></div>
+                <strong>Proteins</strong>
+                <span>0</span>
+              </li>
+              <li>
+                <div class="dot2"></div>
+                <strong>Carbs</strong>
+                <span>0</span>
+              </li>
+              <li>
+                <div class="dot3"></div>
+                <strong>Fats</strong>
+                <span>0</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="calories">
+          <i class="fa-solid fa-utensils"></i>
+          <h1 id="headerMeal">Add a meal!</h1>
+          <button class="add"><i class="fa-solid fa-circle-plus"></i></button>
+          <div id="addedMeals"></div>
+        </div>
+      </div>
+      <div class="div3">
+        <div class="recipes">
+          <h1>Our <span class="highlight">top picks</span> recipes</h1>
+          <div class="recipe">
+            <div class="recipeTag"></div>
+          </div>
+          <div class="recipe">
+            <div class="recipeTag"></div>
+          </div>
+          <div class="recipe">
+            <div class="recipeTag"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="recipeTextContainer">
+      <div id="recipeText">
+        <div id="recipeImage"></div>
+        <div id="recipeContent">
+          <h1>Ingredients:</h1>
+          <ul id="textIngredients"></ul>
+          <h1>Instructions:</h1>
+          <p id="textRecipe"></p>
+        </div>
+      </div>
+      <div id="closeRecipe"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+<!-- contenteditable="true" -->
